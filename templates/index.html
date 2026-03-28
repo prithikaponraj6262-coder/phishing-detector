@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Phishing Detector</title>
+    <title>Phishing URL Detector</title>
 
     <style>
         body {
@@ -15,13 +15,21 @@
         input {
             padding: 10px;
             width: 300px;
+            border-radius: 5px;
+            border: none;
         }
 
         button {
-            padding: 10px;
-            background-color: green;
+            padding: 10px 20px;
+            background-color: #22c55e;
             color: white;
             border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #16a34a;
         }
 
         .result {
@@ -36,9 +44,9 @@
     <h1>🔐 Phishing URL Detector</h1>
 
     <form method="POST">
-        <input type="text" name="url" placeholder="Enter URL here">
+        <input type="text" name="url" placeholder="Enter URL here..." required>
         <br><br>
-        <button type="submit">Check</button>
+        <button type="submit">Check URL</button>
     </form>
 
     {% if result %}
@@ -47,3 +55,5 @@
 
 </body>
 </html>
+           
+      
